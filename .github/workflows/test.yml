@@ -18,4 +18,22 @@ jobs:
         run: |
           pwd
           cd category
+          chmod +x ./scripts/setup.sh
+          ./scripts/setup.sh
+        shell: bash
+      - name: Show Category .env file content
+        run: |
+          pwd
           ls -la
+          cat .env
+      - name: Install Category dependencies
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14.x'
+      - run: npm ci
+      - name: Show Category file content
+        run: |
+          pwd
+          ls -la
+
+  
