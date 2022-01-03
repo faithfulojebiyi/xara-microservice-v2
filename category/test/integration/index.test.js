@@ -1,10 +1,10 @@
 const chai = require('chai')
 const chaiHttp = require('chai-http')
-const app = require('../../category/app')
-const app2 = require('../../template/app')
-const db = require('../../category/app/db')
+const app = require('../../app')
+const app2 = require('../../../template/app')
+const db = require('../../app/db')
 
-const { constants } = require('../../category/app/utils')
+const { constants } = require('../../app/utils')
 const { CATEGORY_NOT_FOUND } = constants
 const { expect } = chai
 chai.use(chaiHttp)
