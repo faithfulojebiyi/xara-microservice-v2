@@ -16,23 +16,6 @@ jobs:
       - uses: actions/checkout@v2
       - name: Set Up Category Environment Variables
         run: |
-          cd category/
-          chmod +x ./scripts/setup.sh
-          ./scripts/setup.sh
-        shell: bash
-      - name: Show Category .env file content
-        run: |
           pwd
-          cd category/
+          cd category
           ls -la
-          cat .env
-      - name: Install Category dependencies
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14.x'
-      - run: npm ci
-      - name: Set Up Template Environment Variables
-        run: |
-          cd ../
-          ls -la
-  
