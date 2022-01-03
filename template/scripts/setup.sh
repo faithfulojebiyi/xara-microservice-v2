@@ -1,0 +1,4 @@
+#!/bin/sh
+echo DATABASE_URL=$DATABASE_URL >> .env
+echo TEST_DATABASE_URL=$TEST_DATABASE_URL >> .env
+echo NODE_ENV=$NODE_ENV >> .env
