@@ -16,42 +16,13 @@ jobs:
       - uses: actions/checkout@v2
       - name: Set Up Category Environment Variables
         run: |
-          cd ./category
+          cd category/
           chmod +x ./scripts/setup.sh
           ./scripts/setup.sh
         shell: bash
       - name: Show Category .env file content
         run: |
           pwd
+          cd category/
           ls -la
-          cat .env
-      - name: Install Category dependencies
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14.x'
-      - run: npm ci
-      - name: Set Up Template Environment Variables
-        run: |
-          cd ../
-          cd ./template
-          chmod +x ./scripts/setup.sh
-          ./scripts/setup.sh
-        shell: bash
-      - name: Show Template .env file content
-        run: |
-          pwd
-          ls -la
-          cat .env
-      - name: Install Template dependencies
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14.x'
-      - run: npm ci
-      - name: Run unit tests
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14.x'
-      - run: cd ../
-      - run: npm ci
-      - run: npm run test
   
