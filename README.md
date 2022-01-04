@@ -86,7 +86,10 @@ Start the dev server for template microservice
   docker-compose up -d
 ```
 You should be able to access the category server at `localhost:5002`
+
 You should be able to access the template server at `localhost:5003`
+
+You can also access both the template and category server at `localhost:8080` We are using NGINX as a reverse proxy
 
   
 ## Running Tests
