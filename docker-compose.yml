@@ -4,25 +4,12 @@ services:
   category:
     build: './category'
     ports:
-      - "5002:5000"
-    depends_on: 
-      - db
-    environment:
-      - DATABASE_URL
+      - "5002:5002"
 
   template:
     build: './template'
     ports:
-      - "5003:5000"
-    depends_on: 
-      - db
-    environment:
-      - DATABASE_URL
-  
-  db:
-    image: mongo
-    ports:
-      - "27017:27017"
+      - "5003:5003"
 
   nginx:
     image: nginx:latest
