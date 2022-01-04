@@ -11,6 +11,8 @@
 To run this project, you will need to add the following environment variables to your  .env file
 both in the category and template directory respectively
 
+I recommend using [MongoDb ATLAS](https://www.mongodb.com/cloud/atlas/register)for your database as this project is designed to use it
+
 look at the example in `.env.example`
 
 `DATABASE_URL`
